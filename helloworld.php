@@ -16,13 +16,6 @@
        document.getElementById('greetingOutput').innerText = "Hello World from Coffeescript"
    </script> 
 
-
-  <script type="application/dart" src="app.dart"></script>
-    <!-- bootstraps the Dart VM and handles non-Dart browsers -->
-    <script type="text/javascript"
-      src="dart.js">
-</script>
-
 </head>
  <body>
 <h1>
@@ -56,7 +49,6 @@ Replace this text"
 </tr>
 
 </table>
-<input type="text" name="myField1" value="<?php echo isset($_POST['myField1']) ? $_POST['myField1'] : '' ?>" />
 
 <input type = "submit"/>
 </form>

@@ -13,8 +13,17 @@
    </script>
 
    <script type="text/coffeescript">
-       document.getElementById('greetingOutput').innerText = "Hello World from Coffeescript"
-   </script> 
+       greet = (x) ->  document.getElementById('greetingOutput').innerText = x   
+  
+       greet("Coffeescript is working.")
+   </script>
+
+
+
+
+
+
+
 
 </head>
  <body>

@@ -1,0 +1,76 @@
+<html>
+<head>
+<title>Test Jstorage</title>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script src="coffee-script.js"></script>
+<script src="jstorage.js"></script>
+
+
+<script type="text/coffeescript">
+
+
+  ### Define functions ###
+
+  showStatus = (message) ->
+      $('#status').show().html(message).fadeOut(2222)
+
+  clearValue = ->
+      $('#filecontents').val('')
+      showStatus 'Cleared'       
+
+  saveValue = ->
+      key = $('#filename').val()
+      value = $('#filecontents').val()
+      $.jStorage.set(key,value)
+      showStatus 'Saved'
+
+  loadValue = ->
+      key = $('#filename').val()
+      value = $.jStorage.get(key)
+      $('#filecontents').val(value)
+      showStatus 'Loaded'      
+
+  ### Hook functions to events ###
+  $('#clear').click -> clearValue()      
+  $('#save').click -> saveValue()        
+  $('#load').click -> loadValue()   
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+<h1>CoffeeScript, jStorage and jQuery<span id="message"></span></h1>
+"Filename":<input type="text" id="filename" value="default"/>
+<a href="#" id="clear">Clear</a>
+<a href="#" id="save">Save</a>
+<a href="#" id="load">Load</a><br/>
+<span id="status"></span>
+<br/>
+<textarea id="filecontents" rows=3 cols=40></textarea>
+
+</body>
+</html>
+
+
+
+
+
+
+
+

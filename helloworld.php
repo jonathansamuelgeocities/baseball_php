@@ -9,7 +9,11 @@
    </script>
 
 
-   <script src="coffee-script.js" type="text/javascript" charset="utf-8">
+ 
+   <script src="https://raw.github.com/jonathansamuelgeocities/baseball_php/master/coffee-script.js"></script>
+   <script src="https://raw.github.com/jonathansamuelgeocities/baseball_php/master/jstorage.js"></script>
+
+
    </script>
 
    <script type="text/coffeescript">
